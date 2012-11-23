@@ -9,7 +9,6 @@ localization files from I18n yaml.
 In your +Assetfile+:
 
   !!!ruby
-  require "rake-pipeline-web-filters"
   require "rake-pipeline-i18n-filters"
 
   input "assets"
@@ -20,9 +19,8 @@ In your +Assetfile+:
   output 'public/scripts'
   input 'locales' do
     match '**/*.yml' do
-      i18nJs
+      i18n_js { 'locales.js' }
     end
-    concat 'locales.js'
   end
 
   # Take all YAML inputs and generate JS suitable for
@@ -30,9 +28,8 @@ In your +Assetfile+:
   output 'assets/scripts/config'
   input 'locales' do
     match '**/*.yml' do
-      emberStrings
+      ember_strings { 'locales.js' }
     end
-    concat 'locales.js'
   end
 
 = Available Filters
