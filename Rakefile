@@ -15,5 +15,5 @@ task :build do
 end
 desc "build and release the gem"
 task :release => :build do
-  system "gem push activeadmin-axlsx-#{Rake::Pipeline::I18n::Filters::VERSION}.gem"
+  system "gem push rake-pipeline-i18n-filters-#{Rake::Pipeline::I18n::Filters::VERSION}.gem"
 end
