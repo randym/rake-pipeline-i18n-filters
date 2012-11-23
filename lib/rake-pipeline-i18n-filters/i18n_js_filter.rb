@@ -36,12 +36,11 @@ module Rake::Pipeline::I18n::Filters
     # @param [FileWrapper] output a single {FileWrapper}
     #   object representing the output.
     def generate_output(inputs, output)
-      js_dec = 'I18n.translations = I18n.translations || {};' 
       output_hash = {}
       inputs.each do |input|
         output_hash.deep_merge! YAML.load(input.read)
       end  
-      output.write "#{js_dec}\nI18n.translations = #{output_hash.to_json};"
+      output.write "I18n.translations = #{output_hash.to_json};"
     end
 
     private

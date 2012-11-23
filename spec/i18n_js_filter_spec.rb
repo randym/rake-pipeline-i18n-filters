@@ -20,7 +20,7 @@ EOF
 
   # not using heredoc as it adds an extra \n to the end
   let(:expected_i18n_js) {
-  "I18n.translations = I18n.translations || {};\nI18n.translations = {\"en\":{\"foo\":\"bar\",\"hoge\":\"hoge\"},\"ja\":{\"foo\":\"バー\",\"hoge\":\"ホゲ\"}};"
+  "I18n.translations = {\"en\":{\"foo\":\"bar\",\"hoge\":\"hoge\"},\"ja\":{\"foo\":\"バー\",\"hoge\":\"ホゲ\"}};"
   }
   def input_file(name, content)
     MemoryFileWrapper.new('/path/to/input', name, 'UTF-8', content)
