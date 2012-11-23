@@ -1,5 +1,4 @@
 #!/usr/bin/env rake
-require "bundler/gem_tasks"
 require "bundler/setup"
 
 desc "run the specs"
