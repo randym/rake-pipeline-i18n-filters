@@ -16,6 +16,9 @@ module Rake::Pipeline::I18n::Filters
   #   end
   #
   class I18nJsFilter < Rake::Pipeline::Filter
+
+    include FilterWithDependencies
+    
     # @see https://github.com/fnando/i18n-js
     # @param [Proc] block a block to use as the Filter's
     #   {#output_name_generator}.
@@ -44,7 +47,7 @@ module Rake::Pipeline::I18n::Filters
     private
 
     def external_dependencies
-      [ 'yaml' ]
+      [ 'yaml', 'json' ]
     end
 
   end

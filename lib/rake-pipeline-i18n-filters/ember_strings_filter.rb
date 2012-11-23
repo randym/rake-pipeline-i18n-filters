@@ -16,6 +16,9 @@ module Rake::Pipeline::I18n::Filters
   #   end
   #
   class EmberStringsFilter < Rake::Pipeline::Filter
+  
+    include FilterWithDependencies
+
     # @param [Hash] options
     #   A hash of options for this filter
     # @option [String] :use_i18n_js
@@ -49,7 +52,7 @@ module Rake::Pipeline::I18n::Filters
     private
 
     def external_dependencies
-      [ 'yaml' ]
+      [ 'yaml', 'json' ]
     end
 
     def ember_i18n_output(inputs)
