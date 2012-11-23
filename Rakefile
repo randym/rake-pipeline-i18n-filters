@@ -8,3 +8,12 @@ task :spec do
 end
 
 task :default => :spec
+
+desc "build the gem"
+task :build do
+  system "gem build rake-pipeline-i18n-filters.gemspec"
+end
+desc "build and release the gem"
+task :release => :build do
+  system "gem push activeadmin-axlsx-#{Rake::Pipeline::I18n::Filters::VERSION}.gem"
+end
