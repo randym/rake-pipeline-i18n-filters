@@ -1,5 +1,3 @@
-require "rake-pipeline-I18n-filters/helpers"
-
 describe "Helpers" do
   let(:pipeline) { Rake::Pipeline.new }
   let(:dsl) { Rake::Pipeline::DSL::PipelineDSL.new(pipeline) }

@@ -1,6 +1,4 @@
 # encoding: UTF-8
-require 'yaml'
-
 
 describe "EmberStringsFilter" do
   EmberStringsFilter ||= Rake::Pipeline::I18n::Filters::EmberStringsFilter

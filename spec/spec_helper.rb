@@ -1,6 +1,5 @@
 require "rake-pipeline"
 require "rake-pipeline-i18n-filters"
-require 'json'
 class Rake::Pipeline
   module SpecHelpers
 

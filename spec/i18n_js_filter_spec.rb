@@ -1,6 +1,4 @@
 # encoding: UTF-8
-require 'yaml'
-
 
 describe "I18nJsFilter" do
   I18nJsFilter ||= Rake::Pipeline::I18n::Filters::I18nJsFilter
