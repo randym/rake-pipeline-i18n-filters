@@ -1,4 +1,4 @@
-# Rake::Pipeline::Web::Filters
+# Rake::Pipeline::I18n::Filters
 
-Documentation for Rake::Pipeline::Web::Filters is hosted at
-<a href="http://rubydoc.info/github/wycats/rake-pipeline-web-filters/master/file/README.yard">rubydoc.info</a>
+Documentation for Rake::Pipeline::I18n::Filters is hosted at
+<a href="http://rubydoc.info/github/randym/rake-pipeline-i18n-filters/master/file/README.yard">rubydoc.info</a>
